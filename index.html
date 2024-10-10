@@ -1,88 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="style.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SimbaGames GitHub</title>
+    <title>SimbaGames Hub</title>
+    <script src="mainscript.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color: #282c34; color: white;">
-    <div>
-       <table>
-        <tbody>
-            <tr>
-                <td>
-                    <div>
-                        <Img style="height: 50px; width: 50px; border-radius: 50%;" src="/images/PB.png">
-                    </div>
-                </td>
-                <td>
-                    <div>
-                        <h1>SimbaGames</h1>
-                    </div>
-                </td>
-                <td>
-                    <div>
-                        <a href="https://github.com/SimbaGamess" style="color: white; text-decoration: none; font-size: 30px;">GitHub</a>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table> 
-    <table >
-        <thead>
-            <tr>
-                <h1>Projects beginnings</h1>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <div>
-                        <h1>SpaceShooter</h1>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th>
-                    <div>
-                        <img src="/images/SpaceShooter.png" style="width: 300px;" alt="Space Adventure">
-                    </div>
-                </th>
-                <th>
-                    <div class="description" style="width: 300px;">
-                        In this Browser Game you can Fly around in a 2D space, dodge meteors and shoot them.
-                    </div>
-                </th>
-            </tr>
-            <tr>
-                <td>
-                    <div>
-                        <h1>Simple DVD</h1>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th>
-                    <div>
-                        <img src="/images/simpleDVD.png" style="width: 300px;" alt="Space Adventure">
-                    </div>
-                </th>
-                <th>
-                    <div class="description" style="width: 300px;">
-                        This is a simple Browser Application wich shows the old DVD screensaver.
-                    </div>
-                </th>
-            </tr>
-            
-        </tbody>
-    </table>
+<body>
+    <div class="container">
+        <div class="header">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img style="height: 50px; width: 50px; border-radius: 50%;" src="/images/PB.png">
+                        </td>
+                        <td>
+                            <h1>SimbaGames</h1>
+                        </td>
+                        <td>
+                            <a href="https://github.com/SimbaGamess" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none; font-size: 30px;">GitHub</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table> 
+        </div>
+        <h1>Projects beginnings</h1>
+        <div class="projects-container">
+            <div class="project">
+                <h1>SpaceShooter</h1>
+                <img src="/images/SpaceShooter.png" alt="Space Adventure">
+                <div class="description">
+                    In this Browser Game you can fly around in a 2D space, dodge meteors and shoot them.
+                </div>
+            </div>
+            <div class="project">
+                <h1>Simple DVD</h1>
+                <img src="/images/simpleDVD.png" alt="Simple DVD">
+                <div class="description">
+                    This is a simple Browser Application which shows the old DVD screensaver.
+                </div>
+            </div>
+        </div>
+        <h1>Projects more advanced</h1>
+        <div id="by">by Jan Magister</div>
     </div>
-    <div>
-
-    </div>
-    <div>
-        <text id="by">by Jan Magister</text>
-    </div>
+    
 </body>
 </html>
