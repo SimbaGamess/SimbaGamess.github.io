@@ -62,7 +62,23 @@ html, body {
     text-align: center;
 }
 
+.project .img {
+    display: block;
+}
+
+.project .gif {
+    display: none;
+}
+
 .project:hover {
     transform: scale(1.5);
     z-index: 1;
+}
+
+.project:hover .img {
+    display: none;
+}
+
+.project:hover .gif {
+    display: block;
 }
