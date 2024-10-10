@@ -4,3 +4,4 @@ document.querySelectorAll('a').forEach(link => {
         link.setAttribute('rel', 'noopener noreferrer');
     }
 });
+
