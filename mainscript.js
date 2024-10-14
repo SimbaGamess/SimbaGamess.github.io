@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <td>
                         </td>
                         <td>
-                            Mincraft Data Packs
+                            Minecraft Data Packs
                         </td>
                     </tr>
                 </tfoot>
