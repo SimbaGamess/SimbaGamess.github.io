@@ -86,3 +86,11 @@ body {
     display: block;
 }
 
+.command{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+}
+
+.command_text{
+    padding: 10px;
+}
