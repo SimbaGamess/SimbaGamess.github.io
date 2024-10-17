@@ -85,3 +85,59 @@ body {
 .project:hover .gif {
     display: block;
 }
+
+.picture_window {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.pictures {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background-color: gray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: white;
+}

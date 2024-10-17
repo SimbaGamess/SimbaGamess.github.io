@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Tools</title>
     <script src="/js/admintools.js" defer></script>
-    <link rel="stylesheet" href="/css/admintools.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -48,9 +48,13 @@
     </div>
     <div class="container">
         <h1>Admin Tools</h1>
-        <div>
-            // fill in pictures
+    <div class="boarder_picture">
+        <div class="picture_window" id="carousel">
+            <button class="arrow left" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="arrow right" onclick="changeSlide(1)">&#10095;</button>
         </div>
+        <div class="dots" id="dotsContainer"></div>
+    </div>
         <h1>Downloads:</h1>
         <table>
             <tr>
