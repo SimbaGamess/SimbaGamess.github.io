@@ -86,11 +86,21 @@ body {
     display: block;
 }
 
-.command{
+.data{
     font-family: 'Courier New', Courier, monospace;
     font-size: x-large;
+    
+    text-align: center;
 }
 
-.command_text{
+.data_text{
     padding: 10px;
+    text-align: center;
+}
+
+.data_pictures{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
