@@ -96,6 +96,8 @@ body {
 .data_text{
     padding: 10px;
     text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 .data_pictures{
@@ -103,4 +105,16 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.centered-text {
+    
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .data_text {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 }
