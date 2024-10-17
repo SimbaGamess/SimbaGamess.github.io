@@ -5,7 +5,7 @@
 //         link.setAttribute('rel', 'noopener noreferrer');
 //     }
 // });
-const images = [
+/* const images = [
     "../images/datapacks/admincommands.png",
     "../images/datapacks/adminshow.gif"
 ];
@@ -59,4 +59,4 @@ function changeSlide(direction) {
 function setCurrentSlide(index) {
     currentSlide = index;
     showSlide(currentSlide);
-}
+} */
