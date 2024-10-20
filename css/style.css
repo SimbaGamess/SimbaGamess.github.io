@@ -94,6 +94,7 @@ body {
 }
 
 .data_text{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 10px;
     text-align: center;
     margin-left: 15%;
@@ -105,6 +106,25 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.data_pictures_antman{
+    scale: 0.5;
+    max-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.project_data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    padding: 15px;
+    border-radius: 8px;
+    
+    position: relative;
 }
 
 .centered-text {
