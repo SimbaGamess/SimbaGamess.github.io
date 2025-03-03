@@ -132,14 +132,25 @@ body {
     text-align: center;
 }
 
+
+
+.xml_text{
+    color: grey;
+    font-size: small;
+}
+
+.spacing{
+   height: 15px;
+}
+@media (max-width: 800px) {
+    .spacing{
+        height: 40px;
+    }
+}
 @media (max-width: 600px) {
     .data_text {
         margin-left: 5%;
         margin-right: 5%;
     }
-}
 
-.xml_text{
-    color: grey;
-    font-size: small;
 }
