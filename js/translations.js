@@ -13,7 +13,7 @@ const translations = {
             },
             here: 'hier',
             free_text_1: 'Ich bin ein Student aus Deutschland',
-            free_text_2: 'Ich studiere Softwear Engineering und bin aktuell im 6. Semester',
+            free_text_2: 'Ich studiere Software Engineering und bin aktuell im 6. Semester',
             free_text_3: 'Ich habe die meiste Erfahrung in der Java Programmierung,',
             free_text_4: 'arbeite privat aber auch mit anderen Sprachen und lerne gerade Python',
             free_text_5_1: 'Ein Teil meiner bisherigen Projekten können Sie sich&nbsp;',
@@ -111,10 +111,10 @@ const translations = {
             },
             here: 'here',
             free_text_1: 'I\'m a student from Germany',
-            free_text_2: 'I\'m studying software engineering, in the 6th semester',
+            free_text_2: 'Currently I\'m studying software engineering, I\'m in my 6th semester.',
             free_text_3: 'I have the most experience with Java,',
-            free_text_4: 'in my free time i work with outher languages too, currently I\'m learning Python',
-            free_text_5_1: 'a few of my projects you can look at&nbsp;',
+            free_text_4: 'in my free time I work with other languages too, currently I\'m learning Python.',
+            free_text_5_1: 'You can look at some of my projects&nbsp;',
             free_text_5_2: ' ',
         },
         data_packs: {
@@ -172,7 +172,7 @@ const translations = {
         projects: {
             web: {
                 title: 'Web Applications',
-                spaceshooter: {
+                space_shooter: {
                     title: 'Space Shooter',
                     description: 'In this Browser Game you can fly around in a 2D space, dodge meteors and shoot them. (soon)\n' +
                         '                now in the game is only the flying around and shoot aspect \n' +
@@ -192,7 +192,7 @@ const translations = {
             },
             minecraft: {
                 title: "Minecraft Data Packs",
-                linktext: "here you will send to the Minecraft Data Packs Site"
+                link_text: "here you will send to the Minecraft Data Packs Site"
             }
 
         }
