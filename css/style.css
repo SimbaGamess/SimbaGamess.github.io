@@ -138,3 +138,8 @@ body {
         margin-right: 5%;
     }
 }
+
+.xml_text{
+    color: grey;
+    font-size: small;
+}

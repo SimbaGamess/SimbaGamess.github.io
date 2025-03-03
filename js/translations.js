@@ -4,7 +4,22 @@ const translations = {
             german: "Deutsch",
             english: "Englisch"
         },
-        datapacks: {
+        about_me: {
+            title: 'Über Mich',
+            age: 'Alter',
+            local: {
+                local: 'Wohnort',
+                land: 'Deutschland'
+            },
+            here: 'hier',
+            free_text_1: 'Ich bin ein Student aus Deutschland',
+            free_text_2: 'Ich studiere Softwear Engineering und bin aktuell im 6. Semester',
+            free_text_3: 'Ich habe die meiste Erfahrung in der Java Programmierung,',
+            free_text_4: 'arbeite privat aber auch mit anderen Sprachen und lerne gerade Python',
+            free_text_5_1: 'Ein Teil meiner bisherigen Projekten können Sie sich&nbsp;',
+            free_text_5_2: '&nbsp;anschauen',
+        },
+        data_packs: {
             title: "Minecraft Data Packs",
             info: "Jeweiliges Pack anclicken um zur download-seite zu gelangen.",
             antman: {
@@ -31,7 +46,7 @@ const translations = {
                         '                (siehe Bild) \n' +
                         '                Items:\n' +
                         '                ein neuer Helm (nur Optisch Texturpack benötigt)\n' +
-                        '                ein Blitz Schwert, bei einem rechts klick werden blitze an der possition des faden.kreuz erzeugt,\n'+
+                        '                ein Blitz Schwert, bei einem rechts klick werden blitze an der possition des faden.kreuz erzeugt,\n' +
                         '                das schwert hat "leicht " erhöten schaden\n'
                 },
                 main: {
@@ -58,7 +73,7 @@ const translations = {
         projects: {
             web: {
                 title: 'Web Anwendungen',
-                spaceshooter: {
+                space_shooter: {
                     title: 'Space Shooter',
                     description: 'In diesem Browser-Spiel kannst du in einem 2D-Raum fliegen, Meteoren ausweichen und sie abschießen. (bald)\n' +
                         'Aktuell gibt es im Spiel nur den Fliegen- und Schießaspekt.\n' +
@@ -77,8 +92,8 @@ const translations = {
                 }
             },
             minecraft: {
-                title:"Minecraft Data Packs",
-                linktext:"Hier werden Sie auf die Minecraft Data Pack Seite weitergeleitet"
+                title: "Minecraft Data Packs",
+                link_text: "Hier werden Sie auf die Minecraft Data Pack Seite weitergeleitet"
             }
         }
     },
@@ -87,7 +102,22 @@ const translations = {
             german: "German",
             english: "English"
         },
-        datapacks: {
+        about_me: {
+            title: 'About Me',
+            age: 'Age',
+            local: {
+                local: 'Local',
+                land: 'Germany'
+            },
+            here: 'here',
+            free_text_1: 'I\'m a student from Germany',
+            free_text_2: 'I\'m studding software engineering, in the 6th semester',
+            free_text_3: 'I have the most experience with Java,',
+            free_text_4: 'in my free time i work with outher languages too, currently I\'m learning Python',
+            free_text_5_1: 'a few of my projects you can look at&nbsp;',
+            free_text_5_2: ' ',
+        },
+        data_packs: {
             title: "Minecraft Data Packs",
             info: "click to get to the page for downlaod and texturpack",
             antman: {
@@ -161,8 +191,8 @@ const translations = {
                 }
             },
             minecraft: {
-                title:"Minecraft Data Packs",
-                linktext:"here you will send to the Minecraft Data Packs Site"
+                title: "Minecraft Data Packs",
+                linktext: "here you will send to the Minecraft Data Packs Site"
             }
 
         }

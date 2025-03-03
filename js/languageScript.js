@@ -15,7 +15,7 @@ function applyLanguage(lang) {
     document.documentElement.lang = lang; // HTML-Sprachattribut setzen
 
     document.querySelectorAll("[data-lang]").forEach(el => {
-        const key = el.dataset.lang; // z. B. "datapacks.title"
+        const key = el.dataset.lang; // z. B. "data_packs.title"
         const translation = key.split('.').reduce((obj, k) => obj?.[k], translations[lang]);
 
         if (translation) {
