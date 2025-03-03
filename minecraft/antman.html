@@ -5,11 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Antman</title>
-    <script src="/js/antman.js" defer></script>
+    <script src="/js/translations.js"></script>
+    <script defer src="/js/languageScript.js"></script>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
+<div  style="display: flex; justify-content: end; padding-top: 20px; padding-right: 15px;">
+    <select id="languageSwitcher">
+        <option value="de" data-lang="language.german"></option>
+        <option value="en" data-lang="language.english"></option>
+    </select>
+</div>
     <div class="header">
         <table>
             <tbody>
@@ -40,7 +47,7 @@
 
                     </td>
                     <td>
-                        <a style="color: aqua" href="../index.html" rel="noopener noreferrer">Home</a>
+                        <a style="color: aqua" href="./data-packs.html" rel="noopener noreferrer">Home</a>
                     </td>
                 </tr>
             </tfoot>

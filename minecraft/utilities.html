@@ -4,12 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Tools</title>
-    <script src="/js/admintools.js" defer></script>
+    <title>Utilities</title>
+    <script src="/js/translations.js"></script>
+    <script defer src="/js/languageScript.js"></script>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
+<div  style="display: flex; justify-content: end; padding-top: 20px; padding-right: 15px;">
+    <select id="languageSwitcher">
+        <option value="de" data-lang="language.german"></option>
+        <option value="en" data-lang="language.english"></option>
+    </select>
+</div>
     <div class="header">
         <table>
             <tbody>
@@ -40,59 +47,17 @@
 
                     </td>
                     <td>
-                        <a style="color: aqua" href="../index.html" rel="noopener noreferrer">Home</a>
+                        <a style="color: aqua" href="./data-packs.html" rel="noopener noreferrer">Home</a>
                     </td>
                 </tr>
             </tfoot>
         </table>
     </div>
     <div class="container">
-        <h1>Admin Tools</h1>
+        
+        <h1>Utilities</h1>
         <div>
-            <div class="data_text">
-                With this Datapack you get new Admin commands and Tools. <br>
-            </div>
-            <div class="data">Commands:</div>
-            <div class="data">
-                /function admin:admin_on
-            </div>
-            <div class="data_text">
-                with this command you will be set in Admin mode,
-                the player mode changes to creative,
-                a prefix is addet to the name [Admin]
-                aswell your current survival Inventory will be saved,
-                to load it back later.
-                you will get an Admin_Sword and a nice Looking Helmet with Horns
-                (only works with Texturpack)
-            </div>
-            <div class="data">
-                /function admin:admin_off
-            </div>
-            <div class="data_text">
-                with this command you will be set in Normal mode,
-                the player mode changes to survival,
-                the prefix is removed
-                your safed inventory now loads back.
-            </div>
-            <div class="data">
-                /function admin:heal
-            </div>
-            <div class="data_text">
-                this command is used for the survival mode, it will generate water under you to remove your fire.
-                also you will get a healing effect.
-            </div>
-            <br>
-            <div class="data">Tools:</div>
-            <div class="data">
-                Admin_Sword
-            </div>
-            <div class="data_text">
-                This Sword can summon lightnigs by right click, and it has a "few" more attackpoints.
-            </div>
-            <div class="data_pictures">
-                <img src="../images/datapacks/admin/adminshow.gif" alt="">
-            </div>
-
+            //fill in pictures and description
         </div>
         <h1>Downloads:</h1>
         <div class="data_text">
@@ -115,13 +80,13 @@
             </tr>
             <tr>
                 <td>
-                    <a style="color: aqua" href="/downloads/datapacks/admin/Admin-Tools_Datapack_V0_8.zip"
-                        rel="noopener noreferrer" target="_blank">Downlaod Datapack V0.8</a>
+                    <a style="color: aqua" href="/downloads/datapacks/utilities/Utilities_Datapack_V0_5.zip"
+                        rel="noopener noreferrer" target="_blank">Downlaod Datapack V0.5</a>
                 </td>
                 <td style="min-width: 20px;"></td>
                 <td>
-                    <a style="color: aqua" href="/downloads/textures/admin/Admin-Tools_Texturpack_V0_8.zip"
-                        rel="noopener noreferrer" target="_blank">Download Texturpack V0.8</a>
+                    <a style="color: aqua" href="/downloads/textures/utilitys/Utilities_Texturpack_V0_5.zip"
+                        rel="noopener noreferrer" target="_blank">Download Texturpack V0.5</a>
                 </td>
             </tr>
             <tr>

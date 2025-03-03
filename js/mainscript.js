@@ -1,5 +1,6 @@
 
 
+
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.header');
     const projectsTitle = document.querySelector('.container > h1:nth-of-type(1)');
