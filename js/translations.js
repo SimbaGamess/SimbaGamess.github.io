@@ -111,7 +111,7 @@ const translations = {
             },
             here: 'here',
             free_text_1: 'I\'m a student from Germany',
-            free_text_2: 'I\'m studding software engineering, in the 6th semester',
+            free_text_2: 'I\'m studying software engineering, in the 6th semester',
             free_text_3: 'I have the most experience with Java,',
             free_text_4: 'in my free time i work with outher languages too, currently I\'m learning Python',
             free_text_5_1: 'a few of my projects you can look at&nbsp;',
