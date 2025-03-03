@@ -1,97 +1,51 @@
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
-    const header = document.querySelector('.header');
-    const projectsTitle = document.querySelector('.container > h1:nth-of-type(1)');
-    const minecraftTitle = document.querySelector('.container > h1:nth-of-type(2)');
+    const headerTable = document.getElementById('fillintable');
+    const sectionTitles = document.querySelectorAll('.section-title');
+    const addedRows = new Map();
 
-    window.addEventListener('scroll', () => {
-        const projectsRect = projectsTitle.getBoundingClientRect();
-        const minecraftRect = minecraftTitle.getBoundingClientRect();
-        
-        // Wenn das Projects-Element aus dem sichtbaren Bereich verschwindet
-        if (projectsRect.bottom <= header.clientHeight) {
-            header.innerHTML =  `
-            <table>
-                <tbody>
-                    <tr>
-                        <td>
-                            <a href="https://www.twitch.tv/ttvsimbagames" target="_blank">
-                                <img style="height: 60px; width: 60px; border-radius: 50%; border: 1px solid white;"
-                                    src="/images/PB.png" alt="Profilbild">
-                            </a>
-                        </td>
-                        <td>
-                            <a href="https://github.com/SimbaGamess" target="_blank" rel="noopener noreferrer"
-                                style="color: white; text-decoration: none; font-size: 30px;">Jan Magister Portfolio</a>
-                        </td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td>
-                        </td>
-                        <td>
-                            Projects
-                        </td>
-                    </tr>
-                </tfoot>
-            </table>
-        `;
-        } else {
+    // Funktion, um den Titel dynamisch zur Tabelle hinzuzufügen
+    const addTitleToTable = (section) => {
+        const row = document.createElement('tr');
+        const titleCell = document.createElement('td');
+        const sectionCell = document.createElement('td');
 
-            header.innerHTML = `
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <a href="https://www.twitch.tv/ttvsimbagames" target="_blank">
-                                    <img style="height: 60px; width: 60px; border-radius: 50%; border: 1px solid white;"
-                                        src="/images/PB.png" alt="Profilbild">
-                                </a>
-                            </td>
-                            <td>
-                                <a href="https://github.com/SimbaGamess" target="_blank" rel="noopener noreferrer"
-                                    style="color: white; text-decoration: none; font-size: 30px;">Jan Magister Portfolio</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            `;
+        titleCell.textContent = "";
+        sectionCell.textContent = "- "+section;
+
+        row.appendChild(titleCell);
+        row.appendChild(sectionCell);
+        headerTable.appendChild(row);
+        addedRows.set(section, row);
+    };
+
+    // Funktion, um den Titel aus der Tabelle zu entfernen
+    const removeTitleFromTable = (section) => {
+        const row = addedRows.get(section);
+        if (row) {
+            headerTable.removeChild(row);
+            addedRows.delete(section); // Entferne den Eintrag aus der Map
         }
+    };
 
-        // Wenn das Minecraft Data Packs-Element aus dem sichtbaren Bereich verschwindet
-        if (minecraftRect.bottom <= header.clientHeight) {
-            header.innerHTML =  `
-            <table>
-                <tbody>
-                    <tr>
-                        <td>
-                            <a href="https://www.twitch.tv/ttvsimbagames" target="_blank">
-                                <img style="height: 60px; width: 60px; border-radius: 50%; border: 1px solid white;"
-                                    src="/images/PB.png" alt="Profilbild">
-                            </a>
-                        </td>
-                        <td>
-                            <a href="https://github.com/SimbaGamess" target="_blank" rel="noopener noreferrer"
-                                style="color: white; text-decoration: none; font-size: 30px;">Jan Magister Portfolio</a>
-                        </td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td>
-                        </td>
-                        <td>
-                            Minecraft Data Packs
-                        </td>
-                    </tr>
-                </tfoot>
-            </table>
-        `;
-        }
+    // Beobachter für das Scrollen und das Sichtbarmachen der Titel
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const section = entry.target;
+            const titleElement = section.querySelector('.section-title');
+
+            if (!entry.isIntersecting && entry.boundingClientRect.top <= 10) {
+                addTitleToTable(section.textContent);
+            } else {
+                removeTitleFromTable(section.textContent);
+            }
+
+        });
+    }, {
+        threshold: 1.0,
     });
-});
 
-
+    // Beobachte alle Sektionen mit dem .section-title
+    sectionTitles.forEach(title => {
+        observer.observe(title);
+    });
+})

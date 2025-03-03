@@ -70,10 +70,15 @@ const translations = {
                 }
             },
             java: {
+                title: "Java Anwendungen",
                 maXx: {
                     title: 'MaXx',
                     description: 'MaXx de',
                 }
+            },
+            minecraft: {
+                title:"Minecraft Data Packs",
+                linktext:"Hier werden Sie auf die Minecraft Data Pack Seite weitergeleitet"
             }
         }
     },
@@ -149,10 +154,15 @@ const translations = {
                 }
             },
             java: {
+                title: "Java Applications",
                 maXx: {
                     title: 'MaXx',
                     description: 'MaXx en',
                 }
+            },
+            minecraft: {
+                title:"Minecraft Data Packs",
+                linktext:"here you will send to the Minecraft Data Packs Site"
             }
 
         }

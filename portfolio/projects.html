@@ -10,7 +10,7 @@
     <script defer src="/js/mainscript.js"></script>
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<div  style="display: flex; justify-content: end; padding-top: 20px; padding-right: 15px;">
+<div style="display: flex; justify-content: end; padding-top: 20px; padding-right: 15px;">
     <select id="languageSwitcher">
         <option value="de" data-lang="language.german"></option>
         <option value="en" data-lang="language.english"></option>
@@ -22,10 +22,8 @@
         <tbody>
         <tr>
             <td>
-                <a href="https://www.twitch.tv/ttvsimbagames" target="_blank" rel="noopener noreferrer">
-                    <img style="height: 60px; width: 60px; border-radius: 50%; border: 1px solid white;"
-                         src="/images/PB.png" alt="Profilbild">
-                </a>
+                <img style="height: 60px; width: 60px; border-radius: 50%; border: 1px solid white;"
+                     src="/images/PB.png" alt="Profilbild">
             </td>
             <td>
                 <a href="https://github.com/SimbaGamess" target="_blank" rel="noopener noreferrer"
@@ -33,10 +31,13 @@
             </td>
         </tr>
         </tbody>
+        <tfoot id="fillintable">
+
+        </tfoot>
     </table>
 </div>
 <div class="container">
-    <h1 data-lang="projects.web.title"></h1>
+    <h1 class="section-title" data-lang="projects.web.title"></h1>
     <div class="projects-container">
         <div class="project">
             <h1 data-lang="projects.web.spaceshooter.title"></h1>
@@ -59,34 +60,32 @@
 
     <div style="min-height: 30px;"></div>
 
-    <h1>Java</h1>
+    <h1 class="section-title" data-lang="projects.java.title"></h1>
     <div class="projects-container">
         <div class="project">
-            <h1>SpaceShooter</h1>
+            <h1 data-lang="projects.java.$NAME$.title"></h1>
             <img class="img" src="/images/project_beginnings/SpaceShooter.png" alt="Space Adventure">
             <img class="gif" src="/images/project_beginnings/SpaceShooter.gif" alt="Space Adventure">
-            <div class="description">
-                In this Browser Game you can fly around in a 2D space, dodge meteors and shoot them. (soon)<br>
-                now in the game is only the flying around and shoot aspect <br>
-                the meteors didn't have any function jet
+            <div class="description" data-lang="projects.java.$NAME$.description">
             </div>
         </div>
 
         <div class="project">
-            <h1>Simple DVD</h1>
+            <h1 data-lang="projects.java.$NAME$.title"></h1>
             <img class="img" src="/images/project_beginnings/simpleDVD.png" alt="Simple DVD">
             <img class="gif" src="/images/project_beginnings/DVD.gif" alt="Simple DVD">
 
-            <div class="description">
-                This is a simple Browser Application which shows the old DVD screensaver.
+            <div class="description" data-lang="projects.java.$NAME$.description">
             </div>
         </div>
     </div>
     <div style="min-height: 60px;"></div>
 
-    <h1 style="margin-bottom: 0;">Minecraft Data Packs
-    </h1>
+    <h1 class="section-title" style="margin-bottom: 0;" data-lang="projects.minecraft.title"></h1>
+    <div style="min-height: 10px;"></div>
 
+    <a href="../minecraft/data-packs.html" style="color: white;" target="_blank" rel="noopener noreferrer"
+       data-lang="projects.minecraft.linktext"></a>
 
     <div style="min-height: 60px;"></div>
     <div id="by">by Jan Magister</div>
