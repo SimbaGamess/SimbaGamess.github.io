@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sectionTitles = document.querySelectorAll('.section-title');
     const addedRows = new Map();
 
-    // Funktion, um den Titel dynamisch zur Tabelle hinzuzufügen
+
     const addTitleToTable = (section) => {
         const row = document.createElement('tr');
         const titleCell = document.createElement('td');
@@ -18,16 +18,16 @@ document.addEventListener('DOMContentLoaded', () => {
         addedRows.set(section, row);
     };
 
-    // Funktion, um den Titel aus der Tabelle zu entfernen
+
     const removeTitleFromTable = (section) => {
         const row = addedRows.get(section);
         if (row) {
             headerTable.removeChild(row);
-            addedRows.delete(section); // Entferne den Eintrag aus der Map
+            addedRows.delete(section);
         }
     };
 
-    // Beobachter für das Scrollen und das Sichtbarmachen der Titel
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             const section = entry.target;
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         threshold: 1.0,
     });
 
-    // Beobachte alle Sektionen mit dem .section-title
+
     sectionTitles.forEach(title => {
         observer.observe(title);
     });

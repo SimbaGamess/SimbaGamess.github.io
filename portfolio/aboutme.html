@@ -57,7 +57,24 @@
         <div style="display: flex; align-items: center; height: 15px">
             <p class="xml_text" style="font-size: x-large">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;</p>
             <p style="font-size: x-large" data-lang="about_me.age"></p>
-            <p style="font-size: x-large">: 25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;07.09.1999</p>
+            <p id="age-display" style="font-size: x-large"></p>
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const birthDate = new Date(1999, 8, 7);
+                    const today = new Date();
+
+                    let age = today.getFullYear() - birthDate.getFullYear();
+                    const hasBirthdayOccurred =
+                        today.getMonth() > birthDate.getMonth() ||
+                        (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
+
+                    if (!hasBirthdayOccurred) {
+                        age--;
+                    }
+
+                    document.getElementById('age-display').innerHTML = `: ${age}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;07.09.1999`;
+                });
+            </script>
         </div>
         <div style="height: 15px"></div>
         <div style="display: flex; align-items: center; height: 15px">

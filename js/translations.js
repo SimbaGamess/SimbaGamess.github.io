@@ -89,6 +89,10 @@ const translations = {
                 maXx: {
                     title: 'MaXx',
                     description: 'MaXx de',
+                },
+                gol:{
+                    title: 'Game of Life',
+                    description: 'gof en',
                 }
             },
             minecraft: {
@@ -188,6 +192,10 @@ const translations = {
                 maXx: {
                     title: 'MaXx',
                     description: 'MaXx en',
+                },
+                gol:{
+                    title: 'Game of Life',
+                    description: 'gof en',
                 }
             },
             minecraft: {
