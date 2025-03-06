@@ -4,6 +4,9 @@ const translations = {
             german: "Deutsch",
             english: "Englisch"
         },
+        navigation:{
+            back: 'zurück',
+        },
         about_me: {
             title: 'Über Mich',
             age: 'Alter',
@@ -74,6 +77,7 @@ const translations = {
         projects: {
             web: {
                 title: 'Web Anwendungen',
+            click: 'Sie können auf Die Bilder klicken um zur Anwedung zu gelangen',
                 space_shooter: {
                     title: 'Space Shooter',
                     description: 'In diesem Browser-Spiel kannst du in einem 2D-Raum fliegen, Meteoren ausweichen und sie abschießen. (bald)\n' +
@@ -92,6 +96,7 @@ const translations = {
             },
             java: {
                 title: "Java Anwendungen",
+                click: 'Sie können auf Die Bilder klicken um zu einer Detalierteren Beschreibung zu gelangen',
                 maXx: {
                     title: 'MaXx',
                     description: 'MaXx de',
@@ -120,6 +125,9 @@ const translations = {
         language: {
             german: "German",
             english: "English"
+        },
+        navigation:{
+            back: 'back',
         },
         about_me: {
             title: 'About Me',
@@ -192,6 +200,7 @@ const translations = {
         projects: {
             web: {
                 title: 'Web Applications',
+                click: 'you can click the pictures to go to the application',
                 space_shooter: {
                     title: 'Space Shooter',
                     description: 'In this Browser Game you can fly around in a 2D space, dodge meteors and shoot them. (soon)\n' +
@@ -210,6 +219,8 @@ const translations = {
             },
             java: {
                 title: "Java Applications",
+                click: 'you can click the pictures to go to a more detailed description site',
+
                 maXx: {
                     title: 'MaXx',
                     description: 'MaXx en',

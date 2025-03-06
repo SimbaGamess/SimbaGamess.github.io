@@ -1,0 +1,66 @@
+body{
+    background-color: rgb(26, 26, 26);
+
+}
+#Titel{
+    font-size: 30px;
+    color: rgb(0, 255, 251);
+    white-space: nowrap;
+}
+#Beschreibung{
+    font-size: 15px;
+    color: rgba(255, 30, 0, 0.822);
+    font-style: italic;
+    white-space: nowrap;
+}
+/* #Kuriboh{
+    width:  100px;
+    height: 100px;
+    cursor: pointer;
+    border-radius: 100%;
+    background-color: red;
+    position: absolute;
+    top: 501.734375px;  */
+
+#ZeichenFeld{
+    width: 1000px;
+    height: 500px;
+    background-image: url(./PNG/background.png);
+    display: block;
+    background-color: rgb(0, 0, 0);
+}
+#Spielbereich{
+    width: 1000px;
+    height: 500px;
+    display: block;
+}
+#Raumschiff{
+    width: 100px;
+    height: 50px;
+    background-image: url(./PNG/raumschiff.png);
+    display: block;
+    position: absolute;
+
+}
+#Projektiel{
+    width: 50px;
+    height: 5px;
+    display: none;
+    position: absolute;
+    background-image: url(./PNG/Projektiel.png);
+}
+#MeteorFläche{
+    display: block;
+}
+.Meteor{
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    background-image: url(./PNG/Meteor.png);
+    animation: rotating 4s linear infinite;
+}
+@keyframes rotating {
+    0%  { transform: rotate(0);}
+    100%{ transform: rotate(1turn);}
+  }

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #playGround {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .cell {
+            height: 10px;
+            width: 10px;
+            background-color: black;
+        }
+
+        #controls {
+            position: absolute;
+            top: 10px;
+            left: 500px;
+            z-index: 9999;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Life</title>
+</head>
+
+<body>
+<div id="controls">
+    <button onclick="startGame()">Play</button>
+    <button onclick="pauseGame()">Pause</button>
+    <button onclick="randomScenario()">Random Scenario</button>
+    <button onclick="allDead()">All Dead</button>
+    <input type="color" id="aliveColorPicker" onchange="changeAliveColor(this.value)" value="#ffffff">
+    <input type="color" id="deadColorPicker" onchange="changeDeadColor(this.value)" value="#000000">
+    <input type="range" id="speedSlider" min="10" max="1000" step="10" value="100" onchange="changeSpeed(this.value)">
+
+</div>
+<div id="playGround"></div>
+
+<script>
+
+    let aliveColor = "#ffffff";
+    let deadColor = "#000000";
+
+    function changeAliveColor(color) {
+        aliveColor = color;
+    }
+
+    function changeDeadColor(color) {
+        deadColor = color;
+    }
+
+    class Cell {
+        constructor(height, width) {
+            this.height = height;
+            this.width = width;
+            this.isAlive = false;
+            this.color = deadColor;
+            this.neighbors = [];
+        }
+
+        toggleColor() {
+            if (!this.isAlive) {
+                this.isAlive = true;
+                this.color = aliveColor;
+            } else {
+                this.isAlive = false;
+                this.color = deadColor;
+            }
+            this.updateColor();
+        }
+
+        toggleColorAlive() {
+            this.isAlive = true;
+            this.color = aliveColor;
+            this.updateColor();
+        }
+
+        updateColor() {
+            this.element.style.backgroundColor = this.color;
+        }
+
+        addNeighbor(neighbor) {
+            this.neighbors.push(neighbor);
+        }
+
+        updateNextState() {
+            const liveNeighbors = this.neighbors.filter(neighbor => neighbor.isAlive).length;
+            if (this.isAlive && (liveNeighbors < 2 || liveNeighbors > 3)) {
+                this.nextState = false;
+            } else if (!this.isAlive && liveNeighbors === 3) {
+                this.nextState = true;
+            } else {
+                this.nextState = this.isAlive;
+            }
+        }
+
+        applyNextState() {
+            this.isAlive = this.nextState;
+            this.color = this.isAlive ? aliveColor : deadColor;
+            this.updateColor();
+        }
+    }
+
+    function gen() {
+        const container = document.getElementById("playGround");
+        const cells = [];
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+        const cellSize = 10;
+        const cellsPerRow = Math.floor(screenWidth / cellSize);
+        const numRows = Math.floor(screenHeight / cellSize);
+
+        container.style.width = `${cellsPerRow * cellSize}px`;
+        container.style.height = `${numRows * cellSize}px`;
+
+        for (let i = 0; i < cellsPerRow * numRows; i++) {
+            cells[i] = new Cell(cellSize, cellSize);
+            const cellElement = document.createElement("div");
+            cellElement.className = "cell";
+            cellElement.addEventListener('mouseover', () => {
+                if (mouseDown) {
+                    cells[i].toggleColorAlive();
+                }
+            });
+            cellElement.addEventListener('mousedown', () => {
+                mouseDown = true;
+                cells[i].toggleColor();
+                /*pauseGame();*/
+            });
+            cellElement.addEventListener('mouseup', () => {
+                mouseDown = false;
+            });
+            container.appendChild(cellElement);
+            cells[i].element = cellElement;
+            cells[i].cellInstance = cells[i]; // Hinzufügen der Zelleninstanz zur Referenzierung
+        }
+
+        connectNeighbors(cells, cellsPerRow, numRows);
+        return cells;
+    }
+
+    function connectNeighbors(cells, cellsPerRow, numRows) {
+        function getIndex(row, col) {
+            const wrappedRow = (row + numRows) % numRows;
+            const wrappedCol = (col + cellsPerRow) % cellsPerRow;
+            return wrappedRow * cellsPerRow + wrappedCol;
+        }
+
+        for (let i = 0; i < cells.length; i++) {
+            const row = Math.floor(i / cellsPerRow);
+            const col = i % cellsPerRow;
+            const currentCell = cells[i];
+
+            const neighborIndices = [
+                [row - 1, col - 1],
+                [row - 1, col],
+                [row - 1, col + 1],
+                [row, col - 1],
+                [row, col + 1],
+                [row + 1, col - 1],
+                [row + 1, col],
+                [row + 1, col + 1]
+            ];
+
+            neighborIndices.forEach(([neighborRow, neighborCol]) => {
+                const neighborIndex = getIndex(neighborRow, neighborCol);
+                if (neighborIndex !== i) {
+                    const neighbor = cells[neighborIndex];
+                    if (neighbor) {
+                        currentCell.addNeighbor(neighbor);
+                    }
+                }
+            });
+        }
+    }
+
+    function updateGame(cells) {
+        if (!isPaused) {
+            cells.forEach(cell => cell.updateNextState());
+            cells.forEach(cell => cell.applyNextState());
+        }
+    }
+
+    function startGame() {
+        isPaused = false;
+    }
+
+    function pauseGame() {
+        isPaused = true;
+    }
+
+    function randomScenario() {
+
+        for (let i = 0; i < cells.length; i++) {
+            const randomState = Math.random() < 0.5;
+            const cell = cells[i].cellInstance || cells[i]; // Zugriff auf das Cell-Objekt
+            cell.isAlive = randomState;
+
+        }
+    }
+
+    function allDead() {
+
+        for (let i = 0; i < cells.length; i++) {
+            const state = 1 === 2;
+            const cell = cells[i].cellInstance || cells[i]; // Zugriff auf das Cell-Objekt
+            cell.isAlive = state;
+
+        }
+    }
+
+
+    function changeSpeed(value) {
+        generationSpeed = value;
+        clearInterval(gameInterval);
+        gameInterval = setInterval(() => {
+            updateGame(cells);
+        }, generationSpeed);
+    }
+
+    let mouseDown = false;
+    let isPaused = false;
+    let generationSpeed = 100;
+    let gameInterval;
+    const cells = gen();
+
+    changeSpeed(generationSpeed);
+</script>
+</body>
+
+</html>
+test
