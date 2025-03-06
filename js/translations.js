@@ -7,6 +7,7 @@ const translations = {
         about_me: {
             title: 'Über Mich',
             age: 'Alter',
+            today: '(Heute)',
             local: {
                 local: 'Wohnort',
                 land: 'Deutschland'
@@ -82,6 +83,11 @@ const translations = {
                 dvd: {
                     title: 'Einfaches DVD Logo',
                     description: 'Das ist eine einfache kleine anwendung welches die alte DVD Logo animation abspielt',
+                },
+                gol:{
+                    title: 'Game of Life',
+                    description: 'Hier ist eine Version von John Conway’s Game of Life.\n' +
+                        ''
                 }
             },
             java: {
@@ -92,7 +98,16 @@ const translations = {
                 },
                 gol:{
                     title: 'Game of Life',
-                    description: 'gof en',
+                    description: 'John Conway’s Game of Life en',
+                },
+                yugioh:{
+                    title: 'Yu Gi Oh Lebens Tracker',
+                    description: 'Eine Yu Gi Oh Lebens Tracker Anwendung, es gibt solche LP Tracker nur für Handys \n' +
+                        'Ich wollte allerdings eine VErsion für den Pc somit habe ich eine selbst gebastelt',
+                },
+                minesweeper: {
+                    title: 'Minesweeper',
+                    description: 'Minesweeper de',
                 }
             },
             minecraft: {
@@ -109,6 +124,7 @@ const translations = {
         about_me: {
             title: 'About Me',
             age: 'Age',
+            today: '(Today)',
             local: {
                 local: 'Local',
                 land: 'Germany'
@@ -185,6 +201,11 @@ const translations = {
                 dvd: {
                     title: ' Simple DVD logo',
                     description: 'This is a simple aplication wich shows the old DVD logo animation',
+                },
+                gol:{
+                    title: 'Game of Life',
+                    description: 'Here is a Version of John Conway’s Game of Life.\n' +
+                        ''
                 }
             },
             java: {
@@ -195,7 +216,16 @@ const translations = {
                 },
                 gol:{
                     title: 'Game of Life',
-                    description: 'gof en',
+                    description: 'John Conway’s Game of Life en',
+                },
+                yugioh:{
+                    title: 'Yu Gi Oh Life Tracker',
+                    description: 'A Yu Gi Oh Life Tracker app, there are only such apps for mobile \n' +
+                        'I wanted one for pc so I made it myself',
+                },
+                minesweeper: {
+                    title: 'Minesweeper',
+                    description: 'Minesweeper en',
                 }
             },
             minecraft: {

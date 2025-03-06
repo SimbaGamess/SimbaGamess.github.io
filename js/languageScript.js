@@ -21,6 +21,10 @@ function applyLanguage(lang) {
         if (translation) {
 
             el.innerHTML = translation.replace(/\n/g, '<br>');
+        }  else {
+            el.textContent = "Fehlt";
+            el.style.color = "red";
+            el.style.fontWeight = "bold";
         }
     });
 
